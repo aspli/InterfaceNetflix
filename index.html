@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="style/main.css">
 
         <!-- Responsividade do site-->
@@ -12,7 +13,7 @@
         <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
         <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
 
-        <title>FUTFLIX</title>
+        <title>POBREFLIX</title>
 
     </head>
     <body>
@@ -42,7 +43,7 @@
                         <i class="fa-solid fa-circle-info"></i>
                         MAIS INFORMAÇÕES
                     </button>
-                    <button role="button" class="botao">
+                    <button role="button" class="botao" data-modal-target="#modal">
                         <i class="fa-brands fa-youtube"></i>
                         VER TRAILER
                     </button>
@@ -96,6 +97,18 @@
             </div>
 
         </div>
+
+        <div class="modal" id="modal">
+            <div class="modal-header">
+              <div class="title">TRAILER</div>
+              <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KPLWWIOCOOQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+            </div>
+          </div>
+          <div id="overlay"></div>
 
         <script src="https://kit.fontawesome.com/98965531fc.js" crossorigin="anonymous"></script>
         <script src="js/owl/jquery.min.js"></script>
