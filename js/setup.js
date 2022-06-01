@@ -6,6 +6,8 @@ $('.owl-carousel').owlCarousel({
     loop:true,
     margin:10,
     nav:false,
+    autoplay: true,
+    autoplayTimeout: 2000,
     responsive:{
         0:{
             items:1
@@ -19,29 +21,6 @@ $('.owl-carousel').owlCarousel({
     }
 })
 
-
-
-openModalButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const modal = document.querySelector(button.dataset.modalTarget)
-    openModal(modal)
-  })
-})
-
-overlay.addEventListener('click', () => {
-  const modals = document.querySelectorAll('.modal.active')
-  modals.forEach(modal => {
-    closeModal(modal)
-  })
-})
-
-closeModalButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const modal = button.closest('.modal')
-    closeModal(modal)
-  })
-})
-
 function openModal(modal) {
   if (modal == null) return
   modal.classList.add('active')
@@ -53,3 +32,27 @@ function closeModal(modal) {
   modal.classList.remove('active')
   overlay.classList.remove('active')
 }
+
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.active')
+  modals.forEach(modal => {
+    closeModal(modal)
+  })
+})
+
+openModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal(modal)
+  })
+})
+
+
+
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal')
+    closeModal(modal)
+  })
+})
+
