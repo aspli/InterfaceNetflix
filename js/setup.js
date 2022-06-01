@@ -29,7 +29,6 @@ function openModal(modal) {
 
 function closeModal(modal) {
    if (modal == null) return
-   modal.remove();
    modal("hide");
 }
 
